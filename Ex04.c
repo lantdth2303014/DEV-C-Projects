@@ -15,31 +15,35 @@ int main(){
 	int s;
 	int choice;
 	
-	printf("Please enter the height: ");
-	scanf("%d", &a);
-	printf("Please enter the width: ");
-	scanf("%d", &b);
-	
-	printf("Press 1 to calculate the parameter of the rectangle \n");
-	printf("Press 2 to calculate the area of the rectangle \n");
-	printf("Enter your choice: ");
-	scanf("%d", &choice);
-	
-	switch(choice){
-		case 1:
-			p = parameter(a,b);
-			printf("The parameter of the rectangle is: %d\n", p);
-		break;
+	int i;
+	for(i = 0; i < 2; i){
+		printf("\nPlease enter the height: ");
+		scanf("%d", &a);
+		printf("Please enter the width: ");
+		scanf("%d", &b);
 		
-		case 2:
-			s = area(a,b);
-			printf("The area of the rectangle is: %d\n", s);
-		break;
+		printf("\nPress 1 to calculate the parameter of the rectangle \n");
+		printf("Press 2 to calculate the area of the rectangle \n");
+		printf("Enter your choice: ");
+		scanf("%d", &choice);
+	
+		switch(choice){
+			case 1:
+				p = parameter(a,b);
+				printf("\nThe parameter of the rectangle is: %d\n", p);
+			break;
 		
-		default:
-			printf("Invalid choice!");
-		break;
-	}	
+			case 2:
+				s = area(a,b);
+				printf("\nThe area of the rectangle is: %d\n", s);
+			break;
+		
+			default:
+				printf("\nInvalid choice!\n");
+			break;
+		}	
+	}
+	
 
 
 }
