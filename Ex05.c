@@ -8,10 +8,14 @@ int main(){
 	
 	int score;
 	
-	printf("Please enter your score: ");
+	int i;
+	for(i = 1; i < 31; i++){
+	printf("Please enter score for student %d: ", i);
 	scanf("%d", &score);
 	
 	grade(score);
+	}
+	
 }
 
 int grade(int a){
